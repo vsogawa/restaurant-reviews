@@ -2,10 +2,12 @@ self.addEventListener('install', function (event) {
     event.waitUntil(
         caches.open('restaurant-static').then(function (cache) {
             return cache.addAll([
+                '/',
                 'main.js',
                 'restaurant_info.js',
                 'dbhelper.js',
                 '../css/styles.css',
+                '../data/restaurants.json',
                 '../index.html',
                 '../restaurant.html',
                 '../img/1.jpg',
